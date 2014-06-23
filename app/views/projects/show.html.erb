@@ -11,8 +11,9 @@
 </p>
 
 <h3>Items</h3>
-<%= @project.items.content %>
-
+<% @project.items do |p| %>
+<%= p.content %>
+<% end %>
 
 <%= link_to 'Edit', edit_project_path(@project) %> |
 <%= link_to 'Back', projects_path %>
